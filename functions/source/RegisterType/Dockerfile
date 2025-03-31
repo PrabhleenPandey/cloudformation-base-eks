@@ -1,4 +1,4 @@
-FROM public.ecr.aws/sam/build-python3.8:latest
+FROM public.ecr.aws/sam/build-python3.12:latest
 
 COPY ./index.py ./requirements.txt ./
 

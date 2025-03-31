@@ -41,7 +41,9 @@ func (r *Handler) List(req handler.Request) handler.ProgressEvent {
 
 // main is the entry point of the application.
 func main() {
+	fmt.Printf("Starting handler for EKS")
 	cfn.Start(&Handler{})
+	fmt.Printf("finished starting  handler for EKS")
 }
 
 type handlerFunc func(handler.Request, *resource.Model, *resource.Model) (handler.ProgressEvent, error)
@@ -55,7 +57,7 @@ func wrap(req handler.Request, f handlerFunc) (response handler.ProgressEvent) {
 				err = errors.New(fmt.Sprint(r))
 			}
 
-			log.Printf("Trapped error in handler: %v", err)
+		    fmt.Printf("Trapped error in handler: %v", err)
 
 			response = handler.NewFailedEvent(err)
 		}
@@ -64,20 +66,20 @@ func wrap(req handler.Request, f handlerFunc) (response handler.ProgressEvent) {
 	// Populate the previous model
 	prevModel := &resource.Model{}
 	if err := req.UnmarshalPrevious(prevModel); err != nil {
-		log.Printf("Error unmarshaling prev model: %v", err)
+		fmt.Printf("Error unmarshaling prev model: %v", err)
 		return handler.NewFailedEvent(err)
 	}
 
 	// Populate the current model
 	currentModel := &resource.Model{}
 	if err := req.Unmarshal(currentModel); err != nil {
-		log.Printf("Error unmarshaling model: %v", err)
+		fmt.Printf("Error unmarshaling model: %v", err)
 		return handler.NewFailedEvent(err)
 	}
 
 	response, err := f(req, prevModel, currentModel)
 	if err != nil {
-		log.Printf("Error returned from handler function: %v", err)
+		fmt.Printf("Error returned from handler function: %v", err)
 		return handler.NewFailedEvent(err)
 	}
 

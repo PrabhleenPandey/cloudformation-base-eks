@@ -12,7 +12,7 @@ BUILD_FUNCTIONS ?= true
 ACL ?= 'private'
 RESOURCE_PATH ?=
 RESOURCE_TYPE ?=
-REGIONS ?=
+REGIONS ?= us-east-1
 TEST_NAMES ?=
 QSPROD_TEST ?= false
 REGIONAL_STACK ?= true
@@ -76,7 +76,7 @@ clean-aws:
 	PROFILE=$(PROFILE) build/clean-aws.sh "$(REGIONS)"
 
 taskcat:
-	TASKCAT_GENERAL_S3_REGIONAL_BUCKETS=false PROFILE=$(PROFILE) TEST_NAMES=$(TEST_NAMES) REGIONS=$(REGIONS) taskcat -q test run -mnl --skip-upload
+	TASKCAT_GENERAL_S3_REGIONAL_BUCKETS=false PROFILE=$(PROFILE) TEST_NAMES=$(TEST_NAMES) REGIONS=$(REGIONS) taskcat -q test run -mnl
 
 lint:
 	cfn-lint templates/*.yaml

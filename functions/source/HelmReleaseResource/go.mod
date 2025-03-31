@@ -159,3 +159,7 @@ require (
 	sigs.k8s.io/kustomize/kyaml v0.13.9 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 )
+
+// Workaround for indirect dependency no longer being available.
+// https://github.com/containerd/containerd/issues/9969
+replace github.com/mitchellh/osext v0.0.0-20151018003038-5e2d6d41470f => github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0

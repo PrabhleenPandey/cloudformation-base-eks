@@ -12,7 +12,7 @@ Resources:
       LoggingConfig:
         LogGroupName: cloudformation/registry/awsqs-kubernetes-helm
         LogRoleArn: !Ref ExecutionRoleArn
-      SchemaHandlerPackage: s3://aws-quickstart/quickstart-helm-resource-provider/awsqs-kubernetes-helm.zip
+      SchemaHandlerPackage: s3://quickstart-bucket-prbhle/awsqs-kubernetes-helm.zip
       ExecutionRoleArn: !Ref ExecutionRoleArn
   ResourceDefaultVersion:
     Type: AWS::CloudFormation::ResourceDefaultVersion

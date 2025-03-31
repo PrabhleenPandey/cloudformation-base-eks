@@ -3,11 +3,14 @@
 package:
 	go mod tidy
 	cfn generate
-	env CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -ldflags="-s -w" -tags="logging" -o bin/bootstrap2 cmd/main.go
-	env CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -ldflags="-s -w" -o bin/bootstrap vpc/main.go
+	env CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -ldflags="-s -w" -tags="logging" -o bin/bootstrap cmd/main.go
+	env CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -ldflags="-s -w" -o bin/handler vpc/main.go
+	find . -exec touch -t 202007010000.00 {} + 
+	cd bin && \
+		zip -FS -X k8svpc.zip bootstrap && \
+		zip -X ../handler.zip ./k8svpc.zip ./bootstrap && \
+		cd ..
+	cp awsqs-kubernetes-helm.json schema.json
 	find . -exec touch -t 202007010000.00 {} +
-	cd bin ; zip -FS -X k8svpc.zip bootstrap ; rm bootstrap ; mv bootstrap2 bootstrap ; zip -X ../handler.zip ./k8svpc.zip ./bootstrap ; cd ..
-	cp  awsqs-kubernetes-helm.json schema.json
-	find . -exec touch -t 202007010000.00 {} +
-	zip -Xr awsqs-kubernetes-helm.zip ./handler.zip ./schema.json ./.rpdk-config ./inputs/
-	rm ./handler.zip ./schema.json
+	zip -Xr awsqs-kubernetes-helm.zip ./handler.zip ./schema.json ./.rpdk-config ./inputs
+	rm ./schema.json

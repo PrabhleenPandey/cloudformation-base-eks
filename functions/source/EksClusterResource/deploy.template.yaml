@@ -13,7 +13,7 @@ Parameters:
   HandlerPackage:
     Type: String
     Description: S3 path for handler package
-    Default: s3://aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/awsqs-eks-cluster.zip
+    Default: s3://quickstart-bucket-prbhle/awsqs-eks-cluster.zip
 Conditions:
   CreateRole: !Equals [!Ref CreateClusterAccessRole, 'Enabled']
   PermissionsBoundary: !Not [!Equals [!Ref PermissionsBoundary, '']]

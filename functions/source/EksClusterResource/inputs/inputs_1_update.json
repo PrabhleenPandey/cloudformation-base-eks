@@ -1,7 +1,7 @@
 {
   "Name": "ContractTest",
   "RoleArn": "{{AwsqsEksClusterContractTestControlPlaneRoleArn}}",
-  "Version": "1.21",
+  "Version": "1.31",
   "KubernetesNetworkConfig": {"ServiceIpv4Cidr": "172.20.0.0/16"},
   "ResourcesVpcConfig": {
     "EndpointPublicAccess": "true",

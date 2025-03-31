@@ -76,7 +76,7 @@ Resources:
       Handler: awsqs_kubernetes_resource.utils.proxy_wrap
       MemorySize: 256
       Role: !Ref KubernetesAdminRoleArn
-      Runtime: python3.8
+      Runtime: python3.12
       Timeout: 900
       Code:
         S3Bucket: !Sub eks-quickstart-lambdazips-${AWS::Region}-${AWS::AccountId}
@@ -98,7 +98,7 @@ Resources:
       Handler: index.handler
       MemorySize: 256
       Role: !Ref KubernetesAdminRoleArn
-      Runtime: python3.9
+      Runtime: python3.12
       Timeout: 900
       Layers: [!Ref GetKubectlLayerArn, !Ref GetCrHelperLayerArn, !Ref GetAwsCliLayerArn]
       Code:
@@ -121,7 +121,7 @@ Resources:
       Handler: index.handler
       MemorySize: 256
       Role: !Ref KubernetesAdminRoleArn
-      Runtime: python3.9
+      Runtime: python3.12
       Timeout: 900
       Layers: [!Ref GetKubectlLayerArn, !Ref GetCrHelperLayerArn, !Ref GetAwsCliLayerArn]
       Environment:

@@ -96,7 +96,7 @@ Resources:
     Type: "AWS::Lambda::Function"
     Properties:
       Timeout: 900
-      Runtime: python3.8
+      Runtime: python3.12
       Handler: index.handler
       Role: !GetAtt RegisterTypeRole.Arn
       Code:

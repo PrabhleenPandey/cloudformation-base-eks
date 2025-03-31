@@ -1,0 +1,17 @@
+{
+  "credentials": {
+    "accessKeyId": "ASIA5FTZEJUB2ATWZD4C",
+    "secretAccessKey": "IM6b+nhG0jbjQBnUoH9/m/X+DsZ3NXGkr0sRFpkA",
+    "sessionToken": "IQoJb3JpZ2luX2VjEKn//////////wEaCXVzLWVhc3QtMSJGMEQCIBOkAXWmWyZLKQ/GOWmcepH1PrEqy6R9drEt+bBSJm+gAiBiN3YhA5FoLh2RJxRKdVLLHM6OOyJu/O0GcM7+eO1D9CqmAgjC//////////8BEAAaDDkwNTQxODM5NDg4MyIMrvL9+bIgKglpukhAKvoB0t2k9tza/4EAESpquAvhar3N7PnCsn78i78OrQRVODbYDypCcVM1d0ox1i2L/EOQVYbI55LEpdJNogDhj6znwMFX8idAwIt4zq6Qi1/UwiowGkf4u8NgWTOUNxNwI8xJKRqmz6yAWSTOTe/0GqWJVVftKVC2UdrJAtQrqF9Rer9wsBMl0rBJqRppvAEirzx8GQoZHMiFRB8k3hinHSFZtSoeeavpnIhg6tY+6wNgBS4jPocKjOrF4tGHQKuX094MaBdiekUpOmaaAnkb2Vsspyp7PHJ/CSdbhK6+e3ICsJdkzLw683+dwV5yqmwclssIdqFfkB2cdBYPUjCW2ai9BjqeAaUIPevZpE41Soc3bDxEwZfkazxjy+LwPjIZO2QVDH92oilshs+HoXHV58SAKuyPSYoloMx3PNISbSbDHsnd/ZL2SKoX9wk03Amjc6XLwAm+buFfqeJmuh0c82yrNtmngyMs3RRlkW4C3i59dtxsmovy8ogYe58GS7KJ+19bpdpZ0OObwqHI7XtoUQzo789nIqIHBhRap7S7LszXV9lg"
+  },
+  "action": "CREATE",
+  "request": {
+    "clientRequestToken": "4b90a7e4-b790-456b-a937-0cfdfa211dfe",
+    "desiredResourceState": {
+      "Name": "TestCluster",
+      "Version": "1.31"
+     },
+    "logicalResourceIdentifier": "MyResource"
+  },
+  "callbackContext": {}
+}

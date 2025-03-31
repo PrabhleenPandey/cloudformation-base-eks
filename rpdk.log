@@ -1,0 +1,6 @@
+[2025-02-06T16:48:55Z] DEBUG    - Logging set up successfully
+[2025-02-06T16:48:55Z] DEBUG    - Running None: Namespace(version=True, subparser_name=None, command=<function main.<locals>.no_command at 0x7f946e3c6310>, verbose=0)
+[2025-02-06T16:48:55Z] DEBUG    - Finished None
+[2025-02-06T16:49:21Z] DEBUG    - Logging set up successfully
+[2025-02-06T16:49:21Z] DEBUG    - Running None: Namespace(version=True, subparser_name=None, command=<function main.<locals>.no_command at 0x7fca5f00d310>, verbose=0)
+[2025-02-06T16:49:21Z] DEBUG    - Finished None

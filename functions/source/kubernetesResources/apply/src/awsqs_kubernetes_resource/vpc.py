@@ -102,7 +102,7 @@ def put_function(sess, cluster_name):
     lmbd = sess.client("lambda")
     function_config = {
         "FunctionName": f"awsqs-kubernetes-resource-proxy-{cluster_name}",
-        "Runtime": "python3.8",
+        "Runtime": "python3.12",
         "Role": role_arn,
         "Handler": "awsqs_kubernetes_resource.utils.proxy_wrap",
         "Timeout": 900,

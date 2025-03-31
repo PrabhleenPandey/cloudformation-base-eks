@@ -121,7 +121,7 @@ Resources:
     Type: "AWS::Lambda::Function"
     Properties:
       Timeout: 300
-      Runtime: python3.7
+      Runtime: python3.9
       Handler: index.handler
       Role: !GetAtt IDGenRole.Arn
       Code:

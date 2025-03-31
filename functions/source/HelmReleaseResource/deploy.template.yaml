@@ -4,7 +4,7 @@ Parameters:
   HandlerPackage:
     Type: String
     Description: S3 path for handler package
-    Default: s3://aws-quickstart/quickstart-helm-resource-provider/awsqs-kubernetes-helm.zip
+    Default: s3://quickstart-bucket-prbhle/awsqs-kubernetes-helm.zip
 Resources:
   ExecutionRole:
     Type: AWS::IAM::Role
