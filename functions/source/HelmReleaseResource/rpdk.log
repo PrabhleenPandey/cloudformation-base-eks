@@ -1,0 +1,25 @@
+[2025-01-02T16:46:56Z] DEBUG    - Logging set up successfully
+[2025-01-02T16:46:56Z] DEBUG    - Running generate: Namespace(version=False, subparser_name='generate', command=<function generate at 0x1068ad9e0>, verbose=0, endpoint_url=None, region=None, local_only=False, target_schemas=[], profile=None)
+[2025-01-02T16:46:56Z] DEBUG    - Root directory: /Users/prbhle/workspace2/quickstart/cloudformation-base-eks/functions/source/HelmReleaseResource
+[2025-01-02T16:46:56Z] DEBUG    - Loading project file '/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/functions/source/HelmReleaseResource/.rpdk-config'
+[2025-01-02T16:46:56Z] DEBUG    - Unhandled exception
+Traceback (most recent call last):
+  File "/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/cfn-env/lib/python3.13/site-packages/rpdk/core/cli.py", line 105, in main
+    args.command(args)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/cfn-env/lib/python3.13/site-packages/rpdk/core/generate.py", line 14, in generate
+    project.load()
+    ~~~~~~~~~~~~^^
+  File "/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/cfn-env/lib/python3.13/site-packages/rpdk/core/project.py", line 621, in load
+    self.load_settings()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/cfn-env/lib/python3.13/site-packages/rpdk/core/project.py", line 291, in load_settings
+    self.validate_and_load_resource_settings(raw_settings)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/cfn-env/lib/python3.13/site-packages/rpdk/core/project.py", line 339, in validate_and_load_resource_settings
+    self._plugin = load_plugin(raw_settings["language"])
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prbhle/workspace2/quickstart/cloudformation-base-eks/cfn-env/lib/python3.13/site-packages/rpdk/core/plugin_registry.py", line 36, in load_plugin
+    return PLUGIN_REGISTRY[language]()()
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'go'
